@@ -1,2 +1,2 @@
-#Adapter Pattern :
+# Adapter Pattern :
 
