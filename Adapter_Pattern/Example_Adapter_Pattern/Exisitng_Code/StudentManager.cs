@@ -16,8 +16,8 @@ namespace Example_Adapter_Pattern.Exisitng_Code
         }
         /*
          * Output :
-         * {[S1, Student Name : Murali; Subjects : MathsPhysicsChemistry;; Count : 3;]}
-         * {[S2, Student Name : krishna; Subjects : PhysicsChemistry;; Count : 2;]}
+         * {[S1, Student Name : Murali; Subjects : Maths Physics Chemistry ; Count : 3;]}
+         * {[S2, Student Name : krishna; Subjects : Physics Chemistry ; Count : 2;]}
         */
         public virtual Dictionary<string,string> GetAllSelectedSujects()
         {
@@ -27,6 +27,16 @@ namespace Example_Adapter_Pattern.Exisitng_Code
                 result.Add(student.StudentId, student.ToString()+ " Count : "+ student.Subjects.Count().ToString()+";");
             }
             return result;
+        }
+
+        public List<string> GetStudentList()
+        {
+            List<string> studentList = new List<string>();
+            foreach(Student student in students)
+            {
+                studentList.Add("StudentID : " + student.StudentId +", Student Name : "+student.Name + ";"); 
+            }
+            return studentList;
         }
     }
 }

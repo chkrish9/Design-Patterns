@@ -9,6 +9,11 @@ namespace Example_Adapter_Pattern.New_Code
 {
     public class StudentAdapter : StudentManager, IStudent
     {
+        /*
+        * Output :
+        * {[S1, Student Name : Murali; Subjects : Maths Physics Chemistry ; Tution Fee : 6000;]}
+        * {[S2, Student Name : krishna; Subjects : Physics Chemistry ; Tution Fee : 4000;]}
+       */
         public override Dictionary<string, string> GetAllSelectedSujects()
         {
             Dictionary<string, string> result = new Dictionary<string, string>();
